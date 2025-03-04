@@ -18,6 +18,7 @@
     z-index: 2;
     border: 0;
 }
+
 #header h1 {
     font-size: 3em;
     align-self: center;
@@ -25,6 +26,7 @@
 }
 nav {
     align-self: center;
+    
 }
 
 nav ul{
@@ -42,10 +44,41 @@ li a {
     margin: 20px;
     font-size: 1.2em;
 }
-
+/* Mobile response */
+@media only screen and (max-width: 1000px){
+    #header {
+        display: block;
+        position: relative;
+        padding: 15px;
+        height: fit-content;
+    }
+    nav {
+        margin: auto;
+        
+    }
+    #header h1 {
+        text-align: center;
+        margin: auto;
+    }
+    nav ul {
+        margin: auto;
+    }
+    ul, li, a{
+        width: fit-content;
+        margin: 0;
+        padding: 0;
+    }
+    ul li a{
+        margin: auto;
+        display: block;
+        text-align: center;
+    }
+}
 #main {
     background-color: #f1f1f1;  
 }
+
+
 #introduction, #about-me, #projects, #services{
     width: 90%;
     height: 100vh;
@@ -53,7 +86,15 @@ li a {
     align-items: center;
     margin: auto;
     justify-content: space-between;
-    
+}
+/* Mobile response */
+@media only screen and (max-width: 1000px){
+    #introduction, #about-me, #projects, #services{
+        display: block;
+        margin: auto;
+        text-align: center;
+        height: auto;
+    }
 }
 h1 {
     font-size: 4.2em;
@@ -66,6 +107,13 @@ h3 {
 }
 .left, .right{
     width: 48%;
+}
+/* Mobile response */
+@media only screen and (max-width: 1000px){
+    .left, .right {
+        width: 90%;
+        margin: 20px auto;
+    }
 }
 #introduction .right h3 {
     font-weight: 400;
@@ -92,9 +140,83 @@ h3 {
 .buttons a:nth-child(2){
     padding: 15px 20px ;
 }
+#about-me {
+    justify-content: space-around;
 
+}
+.templates {
+    display: flex;
+    margin: 30px 50px;
+    padding: 20px 0;
+}
+.company-logos {
+    max-width: 100px;
+    border-radius: 15px;
+    background-color: white;
+    align-content: center;
+}
+.company-logos img {
+    width: 80%;
+    margin: 10px;
+}
+.companies {
+    border: 2px;
+    border-radius: 25px;
+    height:  70%;
+}
+.left h3, .right h3 {
+    font-size: 3em;
+    font-weight: 400;
+}
+.desc {
+    align-self: center;
+    margin-left: 45px;
+}
+.desc h4 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.desc p {
+    font-size: 1.2em;
+    font-weight: 100;
+}
+#projects {
+    display: block;
+    align-content: center;
+}
+.projects {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
-/* Mobile design */
-@media screen {
+.projects .left {
+    width: 30%;
+    border-radius: 15px;
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+}
+.projects .left img {
+    width: 100%;
+}
+#services h1 {
+    margin: auto;
+    text-align: center;
+    font-size: 5em;
+    font-weight: 400;
+}
+#footer {
+    
+}
+@media only screen and (max-width: 1000px){
+    .projects .left {
+        width: 45%;
+    }
+    section#services{
+        height: 50vh;
+        align-content: center;
+    }
     
 }
